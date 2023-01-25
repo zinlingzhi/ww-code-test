@@ -9,6 +9,10 @@ RD.decimal = R.curry(
   (x) => new Decimal(x),
 );
 
+RD.eq = R.curry(
+  (x, y) => RD.decimal(x).equals(y),
+)
+
 RD.lt = R.curry(
   (x, y) => RD.decimal(x)
     .lt(y),
